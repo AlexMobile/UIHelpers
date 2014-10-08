@@ -8,10 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  Basic class for table view cells
+ */
 @interface AGItemCell : UITableViewCell
 
+/**
+ *  Item to be displayed in the cell
+ */
 @property (nonatomic, strong) NSObject *dataItem;
 
+/**
+ *  Inheritors must implement this method to display dataItem
+ */
 - (void)customize;
 
 @end

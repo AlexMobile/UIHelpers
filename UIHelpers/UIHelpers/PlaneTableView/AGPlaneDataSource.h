@@ -8,9 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ *  Simple data source for a plane table (without sections)
+ */
 @interface AGPlaneDataSource : NSObject <UITableViewDataSource>
 
+/**
+ *  Data to be displayed in table
+ */
 @property (nonatomic, strong) NSArray *data;
+
+/**
+ *  Reusable identifier for cells in table view
+ */
 @property (nonatomic, copy) IBInspectable NSString *cellReusableIdentifier;
 
 @end
