@@ -11,49 +11,52 @@
 @implementation AGKeyboardScroller
 
 - (void)awakeFromNib {
-	[super awakeFromNib];
-	
-	[self subscribeForNotifications];
+    [super awakeFromNib];
+
+    [self subscribeForNotifications];
 }
 
 - (void)dealloc {
-	[self unsubsribeFromNotifications];
+    [self unsubsribeFromNotifications];
 }
 
 #pragma mark -
 #pragma mark Keyboard notifications handlers
 
-- (void)keyboardWillShowWithNotification:(NSNotification*)notification {
-    
+- (void)keyboardWillShowWithNotification:(NSNotification *)notification {
+
 }
 
-- (void)keyboardWillHideWithNotification:(NSNotification*)notification {
-    
+- (void)keyboardWillHideWithNotification:(NSNotification *)notification {
+
 }
 
 #pragma mark -
 #pragma mark Private methods
 
 - (void)subscribeForNotifications {
-	NSNotificationCenter* notificationCenter = [NSNotificationCenter defaultCenter];
-	[notificationCenter addObserver:self selector:@selector(keyboardWillShowWithNotification:) name:UIKeyboardWillShowNotification object: nil];
-	[notificationCenter addObserver:self selector:@selector(keyboardWillHideWithNotification:) name:UIKeyboardWillHideNotification object: nil];
+    NSNotificationCenter *notificationCenter = [NSNotificationCenter defaultCenter];
+    [notificationCenter addObserver:self selector:@selector(keyboardWillShowWithNotification:)name:UIKeyboardWillShowNotification object:nil];
+    [notificationCenter addObserver:self selector:@selector(keyboardWillHideWithNotification:)name:UIKeyboardWillHideNotification object:nil];
 }
 
 - (void)unsubsribeFromNotifications {
-	[[NSNotificationCenter defaultCenter] removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
-- (UIView*)activeViewForView:(UIView*)view {
+- (UIView *)activeViewForView:(UIView *)view {
     if ([view isFirstResponder]) {
         return view;
     }
-    for (UIView* subview in [view subviews]) {
+
+    for (UIView *subview in[view subviews]) {
         if ([subview isFirstResponder]) {
             return subview;
         }
+
         [self activeViewForView:subview];
     }
+
     return nil;
 }
 

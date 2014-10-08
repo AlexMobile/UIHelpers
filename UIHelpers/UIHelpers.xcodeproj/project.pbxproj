@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2705B5D819E5E0E000C9E3B6 /* AGItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 2705B5D419E5E0E000C9E3B6 /* AGItemCell.h */; };
+		2705B5D919E5E0E000C9E3B6 /* AGItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2705B5D519E5E0E000C9E3B6 /* AGItemCell.m */; };
+		2705B5DA19E5E0E000C9E3B6 /* AGPlaneDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 2705B5D619E5E0E000C9E3B6 /* AGPlaneDataSource.h */; };
+		2705B5DB19E5E0E000C9E3B6 /* AGPlaneDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 2705B5D719E5E0E000C9E3B6 /* AGPlaneDataSource.m */; };
 		2754764519DDFC68009713C4 /* UIHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 2754764419DDFC68009713C4 /* UIHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2754764F19DDFC68009713C4 /* UIHelpersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2754764E19DDFC68009713C4 /* UIHelpersTests.m */; };
 		2754766419DDFDC7009713C4 /* AGKeyboardScroller.h in Headers */ = {isa = PBXBuildFile; fileRef = 2754766219DDFDC7009713C4 /* AGKeyboardScroller.h */; };
@@ -14,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2705B5D419E5E0E000C9E3B6 /* AGItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGItemCell.h; sourceTree = "<group>"; };
+		2705B5D519E5E0E000C9E3B6 /* AGItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGItemCell.m; sourceTree = "<group>"; };
+		2705B5D619E5E0E000C9E3B6 /* AGPlaneDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AGPlaneDataSource.h; sourceTree = "<group>"; };
+		2705B5D719E5E0E000C9E3B6 /* AGPlaneDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AGPlaneDataSource.m; sourceTree = "<group>"; };
 		2754763F19DDFC68009713C4 /* UIHelpers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIHelpers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2754764319DDFC68009713C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2754764419DDFC68009713C4 /* UIHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIHelpers.h; sourceTree = "<group>"; };
@@ -42,6 +50,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2705B5D319E5E0E000C9E3B6 /* PlaneTableView */ = {
+			isa = PBXGroup;
+			children = (
+				2705B5D419E5E0E000C9E3B6 /* AGItemCell.h */,
+				2705B5D519E5E0E000C9E3B6 /* AGItemCell.m */,
+				2705B5D619E5E0E000C9E3B6 /* AGPlaneDataSource.h */,
+				2705B5D719E5E0E000C9E3B6 /* AGPlaneDataSource.m */,
+			);
+			path = PlaneTableView;
+			sourceTree = "<group>";
+		};
 		2754763519DDFC68009713C4 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +82,7 @@
 		2754764119DDFC68009713C4 /* UIHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				2705B5D319E5E0E000C9E3B6 /* PlaneTableView */,
 				2754766119DDFD69009713C4 /* KeyboardScroller */,
 				2754764419DDFC68009713C4 /* UIHelpers.h */,
 				2754764219DDFC68009713C4 /* Supporting Files */,
@@ -113,6 +133,8 @@
 			files = (
 				2754764519DDFC68009713C4 /* UIHelpers.h in Headers */,
 				2754766419DDFDC7009713C4 /* AGKeyboardScroller.h in Headers */,
+				2705B5DA19E5E0E000C9E3B6 /* AGPlaneDataSource.h in Headers */,
+				2705B5D819E5E0E000C9E3B6 /* AGItemCell.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +233,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2705B5D919E5E0E000C9E3B6 /* AGItemCell.m in Sources */,
 				2754766519DDFDC7009713C4 /* AGKeyboardScroller.m in Sources */,
+				2705B5DB19E5E0E000C9E3B6 /* AGPlaneDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
